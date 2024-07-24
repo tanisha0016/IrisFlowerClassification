@@ -1,67 +1,81 @@
-
 # Iris Flower Classification
 
-This project aims to classify Iris flowers into three species (Iris-setosa, Iris-versicolor, and Iris-virginica) using different machine learning algorithms.
+This project involves classifying Iris flowers into three species (Setosa, Versicolour, and Virginica) based on the features of the flowers using various machine learning models.
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Dataset](#dataset)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Models](#models)
+- [Dataset](#dataset)
+- [Model Training](#model-training)
 - [Results](#results)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
-The Iris flower dataset is a well-known dataset in the machine learning community, containing 150 samples with 4 features: Sepal Length, Sepal Width, Petal Length, and Petal Width. The goal of this project is to build a classification model to predict the species of Iris flowers.
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-username/iris-flower-classification.git
+    cd iris-flower-classification
+    ```
+
+2. Install the required libraries:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. Open the Jupyter notebook:
+    ```sh
+    jupyter notebook
+    ```
+
+2. Upload the Iris dataset using the provided code snippet in the notebook:
+    ```python
+    from google.colab import files
+
+    # Upload the file
+    uploaded = files.upload()
+
+    # Get the name of the uploaded file
+    file_name = list(uploaded.keys())[0]
+
+    # Read the CSV file
+    data = pd.read_csv(file_name)
+    ```
+
+3. Run the cells to see the results of different models.
 
 ## Dataset
-The dataset used in this project is the Iris flower dataset, which is available in the `Iris.csv` file. It contains the following columns:
-- Id
-- SepalLengthCm
-- SepalWidthCm
-- PetalLengthCm
-- PetalWidthCm
-- Species
 
-## Installation
-To run this project, you need to have Python and Jupyter Notebook installed. You can install the required libraries using pip:
+The Iris dataset is a classic dataset used in machine learning and statistics. It includes 150 observations of iris flowers with four features: sepal length, sepal width, petal length, and petal width.
 
-```bash```
-pip install numpy pandas matplotlib seaborn scikit-learn
+## Model Training
 
-##Usage
-Clone this repository:
+Three different models were used to classify the Iris dataset:
+1. Support Vector Machine (SVM)
+2. Logistic Regression
+3. Decision Tree
 
-git clone https://github.com/yourusername/iris-flower-classification.git
-cd iris-flower-classification
+The models were trained and tested using a 80-20 train-test split. The following steps were performed:
+- Data loading and preprocessing
+- Model training
+- Model evaluation
 
+## Results
 
-Open the Jupyter Notebook:
-jupyter notebook Iris_Flower_Classification.ipynb
-Follow the instructions in the notebook to upload the dataset, visualize data, train models, and make predictions.
+The accuracy of the models on the test set were as follows:
+- **SVM**: 96.67%
+- **Logistic Regression**: 96.67%
+- **Decision Tree**: 93.33%
 
-##Models
-The project implements the following machine learning models for classification:
+The classification reports and confusion matrices are also included in the notebook for a detailed analysis.
 
-Support Vector Machine (SVM)
-Logistic Regression
-Decision Tree
-Each model is trained and evaluated on the Iris dataset. The notebook provides code for training, testing, and evaluating the models.
+## Contributing
 
-##Results
-The models are evaluated based on accuracy, confusion matrix, and classification report. Here are the accuracy scores for each model:
+Contributions are welcome! Please fork this repository and open a pull request with your changes.
 
-SVM: 96.67%
-Logistic Regression: 96.67%
-Decision Tree: 93.33%
+## License
 
-
-##Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any feature requests or bug fixes.
-
-##License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-Feel free to customize the sections according to your project details and requirements.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
